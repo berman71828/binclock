@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<!-- 
+  24 Hour Binary/BCD Clock
+  Implemented with HTML5 and pure Javascript
+  Copyright 2014 by Lewis Berman
+-->
+
+<html lang="en"> 
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="binclock.css">
+<title>Binary/BCD Clock</title>
+
+<script type="text/javascript" src="binclock.js">
+</script>
+</head>
+
+<body>
+<div class="clockDiv">
+  <div class="clockInnerDiv">
+
+    <canvas id="clockDisplay">
+    </canvas>
+
+  </div>
+</div>
+
+<div class="controlDiv">
+  &nbsp; Mode: &nbsp; &nbsp; BCD
+  <input type="radio" id="bcdModeRadio" name="bcdMode" value="BCD" onclick="javascript:switchMode('bcd');" >
+  &nbsp;&nbsp; Binary
+  <input type="radio" id="binaryModeRadio" name="binaryMode" value="Binary" onclick="javascript:switchMode('binary');">
+
+  <br/><br/>
+  <input type="button" class="controlButtons" id="stopClock" name="stopClock"  value="Pause" onclick=javascript:stopClock(); >
+  <input type="button" class="controlButtons" id="startClock" name="startClock" value="Resume" onclick=javascript:startClock(); >
+  <input type="button" class="controlButtons" id="information" name="information" value="Show Time Text" onclick=javascript:toggleInfo(); >
+
+  <br/><br/>
+</div>
+<div id="infoDiv" class="infoDiv">
+  <p id="timeTag"> --- </p>
+  <br/>
+  <br/><br/>
+</div>
+
+<!-- The kickoff script -->
+
+<script type="text/javascript">
+  kickoff();
+</script>
+</body>
+</html>
