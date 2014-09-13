@@ -1,5 +1,6 @@
 // BCD/Binary Clock
 // Copyright 2014 by Lewis Berman
+// V1 committed September 13, 2014
 
 var horizontalSeparation = 37;
 var verticalSeparation = 37;
